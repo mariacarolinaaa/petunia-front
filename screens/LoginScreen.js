@@ -1,0 +1,99 @@
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
+import { useFonts } from 'expo-font';
+
+export default function LoginScreen({ navigation }) {
+  const [fontsLoaded] = useFonts({
+    'Notable': require('../assets/fonts/Notable-Regular.ttf'),
+  });
+
+  if (!fontsLoaded) return null;
+
+  return (
+    <ImageBackground
+      source={require('../assets/fundo.png')}
+      style={styles.background}
+      resizeMode="cover"
+    >
+      <View style={styles.container}>
+        <Text style={styles.title}>PETUNIA BOARDS</Text>
+
+        <TextInput
+          style={styles.input}
+          placeholder="E-mail"
+          placeholderTextColor="#fff"
+        />
+
+        <TextInput
+          style={styles.input}
+          placeholder="Senha"
+          placeholderTextColor="#fff"
+          secureTextEntry
+        />
+
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Entrar</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
+          <Text style={styles.registerText}>
+            Não possui conta? Cadastre-se{'\n'}aqui
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </ImageBackground>
+  );
+}
+
+const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  container: {
+    padding: 20,
+    justifyContent: 'center',
+  },
+  title: {
+    color: '#FFF',
+    textAlign: 'center',
+    fontFamily: 'Notable',
+    fontSize: 30,
+    fontWeight: '400',
+    marginBottom: 60,
+    height: 250,
+  },
+  input: {
+    backgroundColor: '#B22222',
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 16,
+    color: '#fff',
+  },
+  button: {
+    backgroundColor: '#B22222',
+    borderRadius: 8,
+    padding: 12,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+  registerText: {
+    color: '#fff',
+    textAlign: 'center',
+    backgroundColor: '#000',
+    padding: 10,
+    borderRadius: 5,
+    fontSize: 12,
+  },
+});
