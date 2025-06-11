@@ -1,7 +1,7 @@
 // src/pages/HomeScreen.js
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, StyleSheet, ScrollView, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, ScrollView, Text, TouchableOpacity} from 'react-native';
 import Header from '../components/header';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/footer';
@@ -23,6 +23,7 @@ export default function HomeScreen() {
         onMenuPress={() => navigation.openDrawer()}
         onSearchPress={() => console.log('Pesquisar')}
         onNovidadesPress={() => navigation.navigate('Novidades')} 
+        onSobrePress={() => navigation.navigate('Sobre')} 
       />
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
