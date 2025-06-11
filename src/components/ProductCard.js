@@ -2,10 +2,10 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-const ProductCard = ({ image, name, description }) => {
+const ProductCard = ({ image, name, description, imageHeight = 200 }) => {
   return (
     <View style={styles.card}>
-      <Image source={image} style={styles.image} resizeMode="cover" />
+      <Image source={image} style={[styles.image, { height: imageHeight }]} resizeMode="cover" />
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.description}>{description}</Text>
     </View>
@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 200,
+  borderTopLeftRadius: 8,
+  borderTopRightRadius: 8,
   },
   name: {
     alignItems: 'center',

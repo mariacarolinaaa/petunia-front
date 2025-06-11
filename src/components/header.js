@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions } from 'rea
 import Icon from 'react-native-vector-icons/Ionicons';
 import logo from '../../assets/logo.jpg';
 
-const Header = ({ title = "Meu App", onMenuPress, onSearchPress }) => {
+const Header = ({ title = "Meu App", onMenuPress, onSearchPress, onNovidadesPress  }) => {
   return (
     <View style={styles.header}>
       {/* Parte superior: menu, logo e lupa */}
@@ -21,7 +21,9 @@ const Header = ({ title = "Meu App", onMenuPress, onSearchPress }) => {
 
       {/* Parte inferior: links de navegação */}
       <View style={styles.bottomBar}>
-        <Text style={styles.linkText}>Novidades</Text>
+        <TouchableOpacity style={{ flex: 1 }} onPress={onNovidadesPress}>
+          <Text style={styles.linkText}>Novidades</Text>
+        </TouchableOpacity>
         <Text style={styles.linkText}>Sobre</Text>
         <Text style={styles.linkText}>Contato</Text>
       </View>
@@ -57,7 +59,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     textAlign: 'center',
-    width: '20',
     flex: 1, // divide espaço igualmente
   },
 });

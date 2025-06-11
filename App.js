@@ -1,13 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+
+
+
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
 import HomeScreen from './src/pages/HomeScreen'; 
+import NovidadesScreen from './src/pages/NovidadesScreen';
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <HomeScreen />
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home"   screenOptions={{ headerShown: false }} >
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Novidades" component={NovidadesScreen} />
+        {/* //aqui vão as telas q forem criadas */}
+      </Drawer.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 
