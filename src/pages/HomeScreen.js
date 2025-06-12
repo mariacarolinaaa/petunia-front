@@ -19,11 +19,11 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Header
-        logo={logo}
         onMenuPress={() => navigation.openDrawer()}
         onSearchPress={() => console.log('Pesquisar')}
         onNovidadesPress={() => navigation.navigate('Novidades')} 
         onSobrePress={() => navigation.navigate('Sobre')} 
+        onContatoPress={() => navigation.navigate('Contato')} 
       />
 
       <ScrollView contentContainerStyle={styles.scrollContent}>

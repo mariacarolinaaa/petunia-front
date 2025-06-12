@@ -15,7 +15,8 @@ export default function SobreScreen() {
         onMenuPress={() => navigation.openDrawer()}
         onSearchPress={() => console.log('Pesquisar')}
         onNovidadesPress={() => navigation.navigate('Novidades')}
-        onSobrePress={() => navigation.navigate('Sobre')} 
+        onSobrePress={() => navigation.navigate('Sobre')}
+        onContatoPress={() => navigation.navigate('Contato')}
       />
 
       <ScrollView contentContainerStyle={styles.scrollContent}>

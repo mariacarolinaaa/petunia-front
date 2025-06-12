@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions } from 'rea
 import Icon from 'react-native-vector-icons/Ionicons';
 import logo from '../../assets/logo.jpg';
 
-const Header = ({ title = "Meu App", onMenuPress, onSearchPress, onNovidadesPress, onSobrePress  }) => {
+const Header = ({ title = "Meu App", onMenuPress, onSearchPress, onNovidadesPress, onSobrePress, onContatoPress, }) => {
   return (
     <View style={styles.header}>
       {/* Parte superior: menu, logo e lupa */}
@@ -21,13 +21,17 @@ const Header = ({ title = "Meu App", onMenuPress, onSearchPress, onNovidadesPres
 
       {/* Parte inferior: links de navegação */}
       <View style={styles.bottomBar}>
-        <TouchableOpacity style={{ flex: 1 }} onPress={onNovidadesPress}>
+        <TouchableOpacity style={styles.novidades} onPress={onNovidadesPress}>
           <Text style={styles.linkText}>Novidades</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{ flex: 1 }} onPress={onSobrePress}>
+        
+        <TouchableOpacity style={styles.sobre} onPress={onSobrePress}>
           <Text style={styles.linkText}>Sobre</Text>
         </TouchableOpacity>
-        <Text style={styles.linkText}>Contato</Text>
+
+        <TouchableOpacity style={styles.contato} onPress={onContatoPress}>
+          <Text style={styles.linkText}>Contato</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -50,7 +54,6 @@ const styles = StyleSheet.create({
     marginTop: 16,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
   },
   logo: {
     height: 60,
@@ -61,7 +64,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     textAlign: 'center',
-    flex: 1, // divide espaço igualmente
+  },
+  novidades: {
+   paddingRight: 10,
+   paddingLeft: 10,
+  },
+  sobre: {
+   paddingRight: 15,
+   paddingLeft: 8,
+  },
+  contato: {
+   paddingRight: 10,
+   paddingLeft: 10,
   },
 });
 

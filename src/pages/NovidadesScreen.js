@@ -24,6 +24,7 @@ export default function NovidadesScreen() {
         onMenuPress={() => navigation.openDrawer()}
         onSearchPress={() => console.log('Pesquisar')}
         onNovidadesPress={() => navigation.navigate('Novidades')} 
+        onContatoPress={() => navigation.navigate('Contato')} 
       />
 
       <ScrollView contentContainerStyle={styles.scrollContent}>

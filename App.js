@@ -10,6 +10,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeScreen from './src/pages/HomeScreen'; 
 import NovidadesScreen from './src/pages/NovidadesScreen';
 import SobreScreen from './src/pages/SobreScreen';
+import ContatoScreen from './src/pages/ContatoScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="Novidades" component={NovidadesScreen} />
         <Drawer.Screen name="Sobre" component={SobreScreen} />
+        <Drawer.Screen name="Contato" component={ContatoScreen} />
         {/* //aqui vão as telas q forem criadas */}
       </Drawer.Navigator>
       <StatusBar style="auto" />
@@ -33,9 +35,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
 
     justifyContent: 'center',
-  },
-  drawer: {
-    flex: 1,
-    backgroundColor: '#red',
   },
 });
