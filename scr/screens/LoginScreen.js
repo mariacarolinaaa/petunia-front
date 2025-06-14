@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   StyleSheet,
   Text,
@@ -7,18 +8,11 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
-import { useFonts } from 'expo-font';
 
 export default function LoginScreen({ navigation }) {
-  const [fontsLoaded] = useFonts({
-    'Notable': require('../assets/fonts/Notable-Regular.ttf'),
-  });
-
-  if (!fontsLoaded) return null;
-
   return (
     <ImageBackground
-      source={require('../assets/fundo.png')}
+    source={require('../screens/assets/fundo.png')}
       style={styles.background}
       resizeMode="cover"
     >
@@ -64,9 +58,8 @@ const styles = StyleSheet.create({
   title: {
     color: '#FFF',
     textAlign: 'center',
-    fontFamily: 'Notable',
     fontSize: 30,
-    fontWeight: '400',
+    fontWeight: '700',
     marginBottom: 60,
     height: 250,
   },
