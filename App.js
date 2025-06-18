@@ -18,6 +18,7 @@ import RolamentosScreen from './src/pages/RolamentosScreen';
 import ShapesScreen from './src/pages/ShapesScreen';
 import RodasScreen from './src/pages/RodasScreen';
 import LixasScreen from './src/pages/LixasScreen';
+import ChavesScreen from './src/pages/ChavesScreen';
 
 
 
@@ -38,9 +39,7 @@ export default function App() {
         <Drawer.Screen name="Shapes" component={ShapesScreen} />
         <Drawer.Screen name="Rodas" component={RodasScreen} />
         <Drawer.Screen name="Lixas" component={LixasScreen} />
-
-        
-
+        <Drawer.Screen name="Chaves" component={ChavesScreen} />
       </Drawer.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
