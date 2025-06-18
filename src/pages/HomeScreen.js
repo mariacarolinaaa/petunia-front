@@ -31,7 +31,7 @@ export default function HomeScreen() {
 
         <View style={styles.row}>
           <ProductCard image={produto1} name="Chave em T PTN " description="R$39,90" />
-          <ProductCard image={produto2} name="Amortecedor 04" description="49,90" />
+          <ProductCard image={produto2} name="Amortecedor Vermelho" description="49,90" />
         </View>
         <View style={styles.row}>
           <ProductCard image={produto3} name="Paeaf Indep " description="R$39,90" />

@@ -1,4 +1,4 @@
-// src/pages/RolamentosScreen.js
+
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, StyleSheet, ScrollView, Text } from 'react-native';
@@ -6,14 +6,14 @@ import Header from '../components/header';
 import ProductCard from '../components/ProductCard';
 import Footer from '../components/footer';
 
-import rolamento1 from '../../assets/rolamento1.png'; // verde
-import rolamento2 from '../../assets/rolamento2.png'; // laranja
-import rolamento4 from '../../assets/rolamento4.png'; // azul
-import rolamento5 from '../../assets/rolamento5.png'; // preto
-import rolamento6 from '../../assets/rolamento6.png'; // amarelo
-import produto2 from '../../assets/produto2.png';     // vermelho
+import amortecedor1 from '../../assets/amortecedor1.png'; // verde
+import amortecedor2 from '../../assets/amortecedor2.png'; // laranja
+import amortecedor3 from '../../assets/amortecedor4.png'; // azul
+import amortecedor4 from '../../assets/amortecedor5.png'; // preto
+import amortecedor5 from '../../assets/amortecedor6.png'; // amarelo
+import amortecedor6 from '../../assets/produto2.png';   // vermelho
 
-export default function RolamentosScreen() {
+export default function AmortecedoresScreen() {
   const navigation = useNavigation();
 
   return (
@@ -27,21 +27,21 @@ export default function RolamentosScreen() {
       />
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <Text style={styles.sectionTitle}>Rolamentos</Text>
+        <Text style={styles.sectionTitle}>Amortecedores</Text>
 
         <View style={styles.row}>
-          <ProductCard image={rolamento1} name="Rolamento Verde" description="R$19,90" imageHeight={100} />
-          <ProductCard image={rolamento2} name="Rolamento Laranja" description="R$21,90" imageHeight={100} />
+          <ProductCard image={amortecedor1} name="Amortecedor Verde" description="R$19,90" imageHeight={100} />
+          <ProductCard image={amortecedor2} name="Amortecedor Laranja" description="R$21,90" imageHeight={100} />
         </View>
 
         <View style={styles.row}>
-          <ProductCard image={rolamento4} name="Rolamento Azul" description="R$24,90" imageHeight={100} />
-          <ProductCard image={rolamento5} name="Rolamento Preto" description="R$19,90" imageHeight={100} />
+          <ProductCard image={amortecedor3} name="Amortecedor Cônico Azul" description="R$24,90" imageHeight={100} />
+          <ProductCard image={amortecedor4} name="Amortecedor Barrel Preto" description="R$19,90" imageHeight={100} />
         </View>
 
         <View style={styles.row}>
-          <ProductCard image={rolamento6} name="Rolamento Amarelo" description="R$22,90" imageHeight={100} />
-          <ProductCard image={produto2} name="Rolamento Vermelho" description="R$22,90" imageHeight={100} />
+          <ProductCard image={amortecedor5} name="Amortecedor Amarelo" description="R$22,90" imageHeight={100} />
+          <ProductCard image={amortecedor6} name="Amortecedor Vermelho" description="R$22,90" imageHeight={100} />
         </View>
       </ScrollView>
 
