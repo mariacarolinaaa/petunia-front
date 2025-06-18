@@ -11,6 +11,7 @@ import HomeScreen from './src/pages/HomeScreen';
 import NovidadesScreen from './src/pages/NovidadesScreen';
 import SobreScreen from './src/pages/SobreScreen';
 import ContatoScreen from './src/pages/ContatoScreen';
+import TrucksScreen from './src/pages/TrucksScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
         <Drawer.Screen name="Novidades" component={NovidadesScreen} />
         <Drawer.Screen name="Sobre" component={SobreScreen} />
         <Drawer.Screen name="Contato" component={ContatoScreen} />
+        <Drawer.Screen name="Trucks" component={TrucksScreen} />
         {/* //aqui vão as telas q forem criadas */}
       </Drawer.Navigator>
       <StatusBar style="auto" />
