@@ -15,6 +15,10 @@ import TrucksScreen from './src/pages/TrucksScreen';
 import ParafusosScreen from './src/pages/ParafusosScreen';
 import AmortecedoresScreen from './src/pages/AmortecedoresScreen';
 import RolamentosScreen from './src/pages/RolamentosScreen';
+import ShapesScreen from './src/pages/ShapesScreen';
+import RodasScreen from './src/pages/RodasScreen';
+import LixasScreen from './src/pages/LixasScreen';
+
 
 
 const Drawer = createDrawerNavigator();
@@ -31,6 +35,12 @@ export default function App() {
         <Drawer.Screen name="Amortecedores" component={AmortecedoresScreen} />
         <Drawer.Screen name="Parafusos" component={ParafusosScreen} />
         <Drawer.Screen name="Rolamentos" component={RolamentosScreen} />
+        <Drawer.Screen name="Shapes" component={ShapesScreen} />
+        <Drawer.Screen name="Rodas" component={RodasScreen} />
+        <Drawer.Screen name="Lixas" component={LixasScreen} />
+
+        
+
       </Drawer.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
