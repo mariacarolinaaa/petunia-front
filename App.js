@@ -1,12 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+
+
+
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+import HomeScreen from './src/pages/HomeScreen'; 
+import NovidadesScreen from './src/pages/NovidadesScreen';
+import SobreScreen from './src/pages/SobreScreen';
+import ContatoScreen from './src/pages/ContatoScreen';
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Petunia</Text>
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home" className="drawer"  screenOptions={{ headerShown: false }} >
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Novidades" component={NovidadesScreen} />
+        <Drawer.Screen name="Sobre" component={SobreScreen} />
+        <Drawer.Screen name="Contato" component={ContatoScreen} />
+        {/* //aqui vão as telas q forem criadas */}
+      </Drawer.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 
@@ -14,7 +33,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
+
     justifyContent: 'center',
   },
 });
