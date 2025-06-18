@@ -14,6 +14,8 @@ import ContatoScreen from './src/pages/ContatoScreen';
 import TrucksScreen from './src/pages/TrucksScreen';
 import ParafusosScreen from './src/pages/ParafusosScreen';
 import AmortecedoresScreen from './src/pages/AmortecedoresScreen';
+import RolamentosScreen from './src/pages/RolamentosScreen';
+
 
 const Drawer = createDrawerNavigator();
 
@@ -28,8 +30,7 @@ export default function App() {
         <Drawer.Screen name="Trucks" component={TrucksScreen} />
         <Drawer.Screen name="Amortecedores" component={AmortecedoresScreen} />
         <Drawer.Screen name="Parafusos" component={ParafusosScreen} />
-
-        {/* //aqui vão as telas q forem criadas */}
+        <Drawer.Screen name="Rolamentos" component={RolamentosScreen} />
       </Drawer.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
