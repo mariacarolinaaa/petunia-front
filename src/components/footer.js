@@ -1,37 +1,38 @@
 import React from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { View, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Ionicons, Feather } from '@expo/vector-icons';
 
-const Footer = () => {
+export default function Footer() {
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.footer}>
-      <TouchableOpacity>
-        <Icon name="home-outline" size={28} color="#fff" />
+    <View
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        paddingVertical: 10,
+        backgroundColor: '#111',
+      }}
+    >
+      
+      <TouchableOpacity onPress={() => navigation.navigate('Drawer', { screen: 'Home' })}>
+        <Ionicons name="home-outline" size={24} color="#fff" />
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Icon name="notifications-outline" size={28} color="#fff" />
+
+      <TouchableOpacity onPress={() => console.log('Notificações')}>
+        <Ionicons name="notifications-outline" size={24} color="#fff" />
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Icon name="cart-outline" size={28} color="#fff" />
+
+      <TouchableOpacity onPress={() => console.log('Carrinho')}>
+        <Ionicons name="cart-outline" size={24} color="#fff" />
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Icon name="person-outline" size={28} color="#fff" />
+
+      
+      <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
+        <Feather name="user" size={24} color="#fff" />
       </TouchableOpacity>
     </View>
   );
-};
-
-const styles = StyleSheet.create({
-  footer: {
-    backgroundColor: '#1E1E1E',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    paddingVertical: 12,
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-  },
-});
-
-export default Footer;
+}
